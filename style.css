@@ -1,0 +1,242 @@
+/* author: https://codepen.io/devrimos/pen/MWvqwNK
+Devrim Demir */
+html{
+    width:100vw;
+    font-family:sans-serif;
+    height:100vh;
+    color:lightgray;
+    overflow: hidden;
+    user-select:none;
+}
+body{
+    margin:0px;
+    padding:0px;
+    max-width:100%;
+    height:100%;
+    background-image:url("https://images.hdqwalls.com/download/windows-11-blue-material-3y-2560x1440.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+}
+nav{
+    width:250px;
+    height:470px;
+    background:rgba(000, 000, 000, 0.65);
+    align-self:center;
+    justify-self:center;
+    border-radius:20px;
+    position:relative;
+    padding:10px;
+}
+.logo{
+    width:95px;
+    position:absolute;
+    inset:15px;
+    filter:grayscale(100%);
+    -webkit-filter:grayscale(100%);
+}
+hr, .hr1{
+    width:100%;
+    height:1px;
+    border:none;
+    border-bottom:1px solid rgba(111, 111, 111, 0.60);
+    margin-top:43px;
+}
+.pages{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    font-size:14px;
+    box-sizing:border-box;
+    cursor:pointer;
+    user-select:none;
+    padding:7px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin:6px 0px;
+}
+.pages svg{
+    height:21px;
+    margin-right: 10px;
+}
+.pages svg path{
+    fill:lightgray;
+}
+.home-p svg path{
+    fill:white;
+}
+.home-p, .pages:hover{
+    color:white;
+    background:rgba(000, 000, 000, 0.30);
+}
+.pages:hover svg path{
+    fill:white;
+}
+.hr2{
+    margin-top: 6px;
+}
+.list{
+    display: flex;
+    width:100%;
+    overflow: auto;
+    padding: 5px 0px;
+}
+.list div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:90px;
+    color:lightgray;
+    cursor: pointer;
+    height: 120px;
+    margin: 7px;
+}
+.list div img{
+    width:90px;
+    filter:grayscale(60%);
+    -webkit-filter:grayscale(60%);
+}
+.list div:hover img{
+    filter:grayscale(0%);
+    -webkit-filter:grayscale(0%);
+}
+.list div p{
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+.list div a{
+    font-size: 9px;
+    margin-top: 3px;
+}
+.list div:hover{
+    color:white;
+}
+.hr3{
+    margin-top: 10px;
+}
+.play{
+    max-width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.play img{
+    width: 55px;
+    margin-right: 5px;
+}
+.play .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.play .songName{
+    font-weight: bolder;
+    font-size: 12px;
+    margin-top: 0px;
+}
+.play .name{
+    font-size: 9px;
+    margin-top: -10px;
+}
+.play .container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.play .container div span{
+    width: 100%;
+    height: 2px;
+    position: relative;
+    display: block;
+    background-color: rgba(111, 111, 111, 0.90);
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+.play .container div span::after{
+    position: absolute;
+    content: "";
+    width:60%;
+    height: 100%;
+    background-color: #1ed760;
+}
+.play .container div span::before{
+    width:10px;
+    height: 10px;
+    position: absolute;
+    content: "";
+    background-color: #1ed760;
+    opacity: 0;
+    left: 60%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.play:hover .container div span::before{
+    opacity: 1;
+}
+.play .container div p{
+    font-size: 8px;
+}
+.play .container .controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+}
+.play .container .controls svg{
+    fill:lightgray;
+    border-radius: 50%;
+    width: 14px;
+    margin: 0px 5px;
+    height: 14px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+}
+.play .container .controls svg.play-btn{
+    background-color: lightgray;
+    fill:black;
+    padding: 2px;
+}
+.play .container .controls svg:hover{
+    fill: #1ed760;
+}
+.play .container .controls svg.play-btn:hover{
+    background-color: #1ed760;
+    fill:lightgray;
+}
+::-webkit-scrollbar{
+    height: 6px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(111, 111, 111, 0.60);
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(111, 111, 111, 0.80);
+}
